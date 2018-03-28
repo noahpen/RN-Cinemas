@@ -2,6 +2,15 @@
    include("config.php");
    session_start();
    
+   if(!isset($_SESSION['login_user'])){
+		echo "<li><a href = 'login.php'>Login</a></li>";
+		echo "<li><a class='active' href = 'sign-up.php'>Sign Up</a></li>";
+	}
+	else{
+		header("location: index.php");
+	}	
+   
+   
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
       
@@ -10,7 +19,7 @@
       
 	  $error = "";
 	  
-      $sql = "SELECT id FROM login WHERE username = '$myusername' and password = '$mypassword'";
+      $sql = "SELECT accountID FROM users WHERE username = '$myusername' and password = '$mypassword'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       $active = $row['active'];
@@ -22,7 +31,7 @@
       if($count == 1) {
          $_SESSION['login_user'] = $myusername;
          
-         header("location: welcome.php");
+         header("location: index.php");
       }else {
          $error = "Your Login Name or Password is invalid";
       }
@@ -32,7 +41,6 @@
    
    <head>
       <title>Login Page</title>
-      
       <style type = "text/css">
          body {
             font-family:Arial, Helvetica, sans-serif;
