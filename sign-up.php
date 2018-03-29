@@ -38,7 +38,6 @@
 					$maxaccountIDrow = mysqli_fetch_assoc($maxaccountIDresult);
 					$maxaccountID = $maxaccountIDrow['max'] + 1;
 
-					//$sql = "INSERT INTO users (accountID, username, password, firstName, lastName, streetNum, streetName, city, province, postalCode, email, creditNum, creditExp, adminFlag) VALUES ('$maxaccountIDrow[accountID]+1', '$myusername', '$mypassword', '$myfirstname', '$mylastname', '$mystreetnum', '$mystreetname', '$mycity', '$myprovince', '$mypostalcode', '$myemail', '$mycreditnum', '$mycreditexp', '0')";
 					$userQuery = "INSERT INTO users (accountID, username, password, firstName, lastName, streetNum, streetName, city, province, postalCode, email, creditNum, creditExp, adminFlag) VALUES ('$maxaccountID', '$myusername', '$mypassword', '$myfirstname', '$mylastname', '$mystreetnum', '$mystreetname', '$mycity', '$myprovince', '$mypostalcode', '$myemail', '$mycreditnum', '$mycreditexp', '0')";					
 					mysqli_query($db,$userQuery);
 
@@ -49,7 +48,7 @@
 				?>
 		</ul>
 		<div style="padding:20px;margin-top:30px;height:1500px;">
-			<h1> Cinema Sign Up Page </h1>
+			<h1 style="text-align:center">Cinema Sign Up Page</h1>
 			<form action = "" method = "post">
 
 				<h2>Login Information</h2>
