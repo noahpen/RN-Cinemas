@@ -30,10 +30,18 @@ Members:
 Administrators:
 
 [ ] list all the members
+
 [ ] remove a member
+
 [ ] add or update the information for a theatre complex/theatre
+
 [ ] add movies to the database
+
 [ ] update where/when movies are showing
+
 [ ] for a particular customer, show their rental history (including current tickets held)
+
 [ ] find the movie that is the most popular (ie. has sold the most tickets across all theatres).
+
 [ ] find the theatre complex that is most popular (ie. has sold the most tickets across all movies)
+
