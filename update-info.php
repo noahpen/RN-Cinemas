@@ -19,6 +19,12 @@
 				if($row['adminFlag'] == 1){
                     echo "<li style='float:right'><a href = 'admin.php'>Admin</a></li>";
 				}
+
+				// GET ACCOUNT ROW
+				$accountQuery = "SELECT * FROM users WHERE accountID = '$login_session_id'";
+				$accountResult = mysqli_query($db,$accountQuery);
+				$accountRow = mysqli_fetch_assoc($accountResult);
+
 			?>
             </ul>
         </div>
@@ -68,25 +74,28 @@
                     echo "<input type = 'text' name = 'username' placeholder=$login_session disabled/><br /><br />"
                     ?>
 				</div>
-				<div class="group">
+				<?php
+				echo "
+				<div class='group'>
 					<label>Password: </label><br />
-					<input type = "password" name = "password" placeholder="" /><br/><br />
+					<input type = 'password' name = 'password' value='$accountRow[password]' /><br/><br />
 				</div>
 
 				<h2>About You</h2>
-				<input type = "text" name = "firstName" placeholder="First Name"/>
-				<input type = "text" name = "lastName" placeholder="Last Name"/><br /><br />
-				<input type = "text" name = "streetNum" placeholder="Street Number"/>
-				<input type = "text" name = "streetName" placeholder="Street Name"/><br /><br />
-				<input type = "text" name = "city" placeholder="City"/><br /><br />
-				<input type = "text" name = "province" placeholder="Province"/><br /><br />
-				<input type = "text" name = "postalCode" placeholder="Postal Code"/><br /><br />
-				<input type = "email" name = "email" placeholder="E-Mail"/><br /><br />
+				<input type = 'text' name = 'firstName' value='$accountRow[firstName]'/>
+				<input type = 'text' name = 'lastName' value='$accountRow[lastName]'/><br /><br />
+				<input type = 'text' name = 'streetNum' value='$accountRow[streetNum]'/>
+				<input type = 'text' name = 'streetName' value='$accountRow[streetName]'/><br /><br />
+				<input type = 'text' name = 'city' value='$accountRow[city]'/><br /><br />
+				<input type = 'text' name = 'province' value='$accountRow[province]'/><br /><br />
+				<input type = 'text' name = 'postalCode' value='$accountRow[postalCode]'/><br /><br />
+				<input type = 'email' name = 'email' value='$accountRow[email]'/><br /><br />
 
 				<h2>Payment Information</h2>
-				<input type = "text" name = "creditNum" placeholder="Credit Card Number"/><br /><br />
-				<input type = "text" name = "creditExp" placeholder="Credit Card Expiry"/><br /><br />
-				<input type = "submit" value = "Update Profile"/><br />
+				<input type = 'text' name = 'creditNum' value='$accountRow[creditNum]'/><br /><br />
+				<input type = 'text' name = 'creditExp' value='$accountRow[creditExp]'/><br /><br />
+				<input type = 'submit' value = 'Update Profile'/><br />";
+				?>
 				
 			</form>
 		</div>

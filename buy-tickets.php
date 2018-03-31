@@ -17,7 +17,6 @@
                 $getComplexID = $_GET['complexID'];
                }
 
-
                 $movieQuery = "SELECT * FROM movie WHERE movieID = '$getMovieID'";
 				$movieResult = mysqli_query($db,$movieQuery);
                 $movieRow = mysqli_fetch_assoc($movieResult);
@@ -35,7 +34,29 @@
                if($row['adminFlag'] == 1){
                echo "<li style='float:right'><a href = 'admin.php'>Admin</a></li>";
                }
-               }	
+               }
+               
+               $ticketsBought = false;
+
+               if($_SERVER["REQUEST_METHOD"] == "POST") {
+                    $myshowing = mysqli_real_escape_string($db,$_POST['showingID']);
+                    $mynumtickets = mysqli_real_escape_string($db,$_POST['numTickets']); 
+
+                    echo "$myshowing";
+                    echo "$mynumtickets";
+                    
+                    for ($x = 1; $x <= $mynumtickets; $x++){
+                        $maxticketIDresult = mysqli_query($db, "SELECT MAX(ticketID) AS max FROM `tickets`" );
+                        $maxticketIDrow = mysqli_fetch_assoc($maxticketIDresult);
+                        $maxticketID = $maxticketIDrow['max'] + 1;
+                        
+
+                        $ticketQuery = "INSERT INTO tickets (ticketID, accountID, seatNum, showingID) VALUES ('$maxticketID', '$login_session_id', 'NULL', '$myshowing')";
+                        mysqli_query($db,$ticketQuery);
+                    }
+
+                    $ticketsBought = true;
+                }
                ?>
          </ul>
       </div>
@@ -65,6 +86,7 @@
                 <th>Theatre Number<th>
                 <th>Avaliable Seats<th>
             <tr>
+            <form method="post">
             <?php
             if(isset($_GET['complexID']) && !empty($_GET['complexID'])){
                 $showingQuery = "SELECT * FROM showing INNER JOIN theatre ON showing.theatreID=theatre.theatreID AND showing.movieID=$getMovieID AND theatre.complexID=$getComplexID";
@@ -75,15 +97,24 @@
                         <td>$showingRow[startTime]<td>
                         <td>$showingRow[theatreNum]<td>
                         <td>$showingRow[numSeats]<td>
-                        <input type='number' name='numTickets'>
-                        <input type='button' value='Buy'>
+                        <td><input type='radio' name='showingID' value='$showingRow[showingID]' />
                     <tr>
                     ";
                 }
             }
             ?>
-
         </table>
+
+            <input type='number' placeholder='Number of Tickets' name='numTickets'>
+            <button type='submit'>Buy</button>
+            </form>
+
+        <?php
+            if ($ticketsBought){
+                echo "<br><br>You have bought $mynumtickets tickets for $movieRow[movieTitle]";
+
+            }
+        ?>
 
       </div>
    </body>
