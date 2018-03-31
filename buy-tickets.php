@@ -75,6 +75,8 @@
                         <td>$showingRow[startTime]<td>
                         <td>$showingRow[theatreNum]<td>
                         <td>$showingRow[numSeats]<td>
+                        <input type='number' name='numTickets'>
+                        <input type='button' value='Buy'>
                     <tr>
                     ";
                 }
