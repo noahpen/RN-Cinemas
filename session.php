@@ -14,6 +14,7 @@
    
         $login_session = $row['username'];
         $login_session_id = $row['accountID'];
+        $login_session_fname = $row['firstName'];
    }
    //if(!isset($_SESSION['login_user'])){
    //   header("location:login.php");
