@@ -1,19 +1,30 @@
 # Cineplex
 
 [X] - DONE
+
 [-] - IN PROGRESS
+
 [ ] - HAVEN'T STARTED
+
 
 Members:
 
 [X] make an account including a login id and password
+
 [-] browse movies playing at the various theatre complexes.
+
 [-] purchase some number of tickets for one or more movies showing at one or more theatres
+
 [ ] view their purchases
+
 [ ] cancel a purchase
+
 [X] update their personal details -- ie. modify their profile
+
 [ ] browse their past rentals.
+
 [X] add a review for a movie.
+
 
 
 Administrators:
