@@ -1,6 +1,9 @@
 <?php
    include('config.php');
    session_start();
+
+   date_default_timezone_set("America/New_York");
+   $current_datetime = date("Y-m-d H:i:s");
    
    if(!isset($_SESSION['login_user'])){
 	   

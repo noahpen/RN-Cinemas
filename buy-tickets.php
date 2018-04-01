@@ -41,9 +41,6 @@
                if($_SERVER["REQUEST_METHOD"] == "POST") {
                     $myshowing = mysqli_real_escape_string($db,$_POST['showingID']);
                     $mynumtickets = mysqli_real_escape_string($db,$_POST['numTickets']); 
-
-                    echo "$myshowing";
-                    echo "$mynumtickets";
                     
                     for ($x = 1; $x <= $mynumtickets; $x++){
                         $maxticketIDresult = mysqli_query($db, "SELECT MAX(ticketID) AS max FROM `tickets`" );
@@ -92,14 +89,16 @@
                 $showingQuery = "SELECT * FROM showing INNER JOIN theatre ON showing.theatreID=theatre.theatreID AND showing.movieID=$getMovieID AND theatre.complexID=$getComplexID";
                 $showingResult = mysqli_query($db,$showingQuery);
                 while($showingRow = mysqli_fetch_assoc($showingResult)){
-                    echo "
-                    <tr>
-                        <td>$showingRow[startTime]<td>
-                        <td>$showingRow[theatreNum]<td>
-                        <td>$showingRow[numSeats]<td>
-                        <td><input type='radio' name='showingID' value='$showingRow[showingID]' />
-                    <tr>
-                    ";
+                    if ($showingRow['startTime'] > $current_datetime){
+                        echo "
+                        <tr>
+                            <td>$showingRow[startTime]<td>
+                            <td>$showingRow[theatreNum]<td>
+                            <td>$showingRow[numSeats]<td>
+                            <td><input type='radio' name='showingID' value='$showingRow[showingID]' />
+                        <tr>
+                        ";
+                    }
                 }
             }
             ?>
