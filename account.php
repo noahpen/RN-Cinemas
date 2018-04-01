@@ -36,7 +36,6 @@
         <div class="userOptions">
             <button type="button" onclick="location.href='purchases.php';" name="view">View or cancel purchases</button>
             <button type="button" onclick="location.href='update-info.php';"name="update">Update account details</button>
-            <button type="button" name="browse">Browse past rentals</button>
         </div>
     </div>
 </html>
