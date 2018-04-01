@@ -35,7 +35,7 @@
             <?php
                 if($_SERVER["REQUEST_METHOD"] == "POST") {
                     $myShowingID = mysqli_real_escape_string($db,$_POST['showingID']);
-                    echo "<h2 id='accountHeader'>Modify Showing $myShowingID</h2>";
+                    echo "<h2 class='header' align='center'>Modify Showing $myShowingID</h2>";
                     if(isset($_POST['modifyShowing'])){
                         echo "<form action='admin-display-showings.php' method='post'>";
                         echo "<p>Showing ID: &nbsp;

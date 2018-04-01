@@ -64,7 +64,7 @@
 			}
 		?>
 		<div class="updateForm">
-			<h1 style="text-align:center">Update Account Info</h1>
+			<h1 class="header" align="center">Update Account Info</h1>
 			<form action = "" method = "POST">
 
 				<h2>Login Information</h2>

@@ -53,7 +53,7 @@
         </ul>
         </div>
             <div style="padding:20px;margin-top:30px;height:1500px;">
-            <h1 style="text-align:center">Add New Complex</h1>
+            <h1 class="header" align="center">Add New Complex</h1>
                 <form action = "" method = "post">
                     <h2>Complex Info</h2>
                     

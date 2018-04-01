@@ -77,7 +77,7 @@
         </ul>
         </div>
             <div style="padding:20px;margin-top:30px;height:1500px;">
-            <h1 style="text-align:center">Add New Movie</h1>
+            <h1 class="header" align="center">Add New Movie</h1>
                 <form action = "" method = "post">
                     <h2>Movie Info</h2>
                     <input type = "text" name = "movieTitle" placeholder="Movie Title"/><br>

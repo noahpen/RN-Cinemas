@@ -44,7 +44,6 @@
 
                     $newTime = date('H:i:s', strtotime($newTime));
                     $dateTime = $newDate . ' ' . $newTime;
-
                     $newMovieIDQuery = "SELECT movieID FROM movie WHERE movieTitle='$newMovieTitle' limit 1";
                     $newMovieIDResult = mysqli_query($db,$newMovieIDQuery);
                     $movieValue = mysqli_fetch_assoc($newMovieIDResult)['movieID']; 
@@ -59,7 +58,7 @@
 			?>
         </ul>
         </div>
-			<h2 id="accountHeader">Modify Showings</h2>
+			<h1 class="header" align="center" style="margin-top:100px;">Modify Showings</h1>
             <div style="padding:20px;height:1500px;">
             <form method="post" action="admin-modify-showing.php">
 		        <table align="center" class="buyTicketsMovieList">
