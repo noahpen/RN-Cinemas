@@ -36,8 +36,12 @@
             <div style="padding:20px;margin-top:30px;height:1500px;">
 				<div class="userOptions">
             		<button type="button" onclick="location.href='admin/admin-list-members.php';" name="view">List Members</button>
-            		<button type="button" onclick="location.href='update-info.php';"name="update">Update account details</button>
-            		<button type="button" name="browse">Browse past rentals</button>
+            		<button type="button" onclick="location.href='admin/admin-add-movie.php';"name="update">Add Movie</button>
+            		<button type="button" onclick="location.href='update-info.php';"name="update">Add Showing</button>
+					<button type="button" onclick="location.href='update-info.php';"name="update">Modify Showing</button>
+					<button type="button" onclick="location.href='update-info.php';"name="update">Customer Search</button>
+					<button type="button" onclick="location.href='update-info.php';"name="update">Movie Stats</button>
+					<button type="button" onclick="location.href='update-info.php';"name="update">Complex Stats</button>
         		</div>
             </div>
     </body>

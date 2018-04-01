@@ -31,9 +31,9 @@ Members:
 
 Administrators:
 
-[ ] list all the members
+[X] list all the members
 
-[ ] remove a member
+[X] remove a member
 
 [ ] add or update the information for a theatre complex/theatre
 
