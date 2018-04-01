@@ -1,0 +1,82 @@
+<?php
+    include('../session.php');
+?>
+<html>
+	<head>
+		<title>Admin - Modify Showing | RN Cinemas</title>
+		<link rel='stylesheet' type='text/css' href='../assets/css/main.css' />
+		<script src="../assets/js/imagesClickJS.js"></script>
+	</head>
+	<body>
+		<div class="navBar">
+		<ul>
+			<li><a href="../index.php">Home</a></li>
+            <?php 
+				if(!isset($_SESSION['login_user'])){
+					header("location: ../index.php");
+				}
+				else{
+					$adminFlagQuery = "SELECT adminFlag FROM users WHERE username = '$login_session'";
+					$adminFlagResult = mysqli_query($db,$adminFlagQuery);
+					$row = mysqli_fetch_assoc($adminFlagResult);
+					echo "<li style='float:right'><a href = '../logout.php'>Sign Out</a></li>";
+					echo "<li style='float:right'><a href = '../account.php'>$login_session</a></li>";
+					if($row['adminFlag'] == 1){
+					    echo "<li style='float:right'><a class='active' href = '../admin.php'>Admin</a></li>";
+                    }
+                    else{
+                        header("location: ../index.php");
+                    }
+                }
+            ?>
+            </ul>
+            
+            <div style='padding:20px;margin-top:30px;'>           
+            <?php
+                if($_SERVER["REQUEST_METHOD"] == "POST") {
+                    $myShowingID = mysqli_real_escape_string($db,$_POST['showingID']);
+                    echo "<h2 id='accountHeader'>Modify Showing $myShowingID</h2>";
+                    if(isset($_POST['modifyShowing'])){
+                        echo "<form action='admin-display-showings.php' method='post'>";
+                        echo "<p>Showing ID: &nbsp;
+                              <input type='text' name='sameShowingID' value='$myShowingID' readonly='readonly' /></br>";
+                        echo "<p>Complex Name: &nbsp;";
+                        $complexQuery = "SELECT complexName FROM complex";
+                        $complexResult = mysqli_query($db,$complexQuery);
+                        echo "<select name='complex'>";
+                        while ($row = mysqli_fetch_array($complexResult)) {
+                            echo "<option value='" . $row['complexName'] . "'>" . $row['complexName'] . "</option>";
+                        }
+                        echo "</select>";
+
+                        echo "<p>Movie Name: &nbsp;";
+                        $movieQuery = "SELECT movieTitle FROM movie";
+                        $movieResult = mysqli_query($db,$movieQuery);
+                        echo "<select name='movie'>";
+                        while ($row = mysqli_fetch_array($movieResult)) {
+                            echo "<option value='" . $row['movieTitle'] . "'>" . $row['movieTitle'] . "</option>";
+                        }
+                        echo "</select>";
+
+                        echo "<p>Theatre ID: &nbsp;
+                              <input type = 'number' name = 'theatreID' placeholder='0'/></br>
+                              </p>";
+
+                        echo "<p>Date: &nbsp;
+                              <input type = 'date' name = 'date'/></br>
+                              </p>";
+          
+                        echo "<p>Time: &nbsp;
+                              <input type = 'text' name = 'startTime' placeholder='hh:mm'/></br>
+                              </p>";
+
+                        echo "<input type='submit' value='Update Showing $myShowingID'>";
+                        echo "</form>";
+                    }
+ 				}
+                    //header("location: admin-modify-showing.php");
+            ?>
+            </p>
+            </div>
+    </body>
+</html>
