@@ -42,7 +42,7 @@ Administrators:
 
 [X] update where/when movies are showing
 
-[ ] for a particular customer, show their rental history (including current tickets held)
+[X] for a particular customer, show their rental history (including current tickets held)
 
 [ ] find the movie that is the most popular (ie. has sold the most tickets across all theatres).
 
