@@ -29,17 +29,83 @@
                     }
                     }
                     
-                $userQuery = "SELECT * FROM users";
-                $userResult = mysqli_query($db,$userQuery);
+                    if($_SERVER["REQUEST_METHOD"] == "POST") {
+                        $file = $_FILES['moviePicture']['tmp_name'];
+
+                        // MOVIE TABLE
+                        $mytitle = mysqli_real_escape_string($db,$_POST['movieTitle']);
+                        $myrunningtime = mysqli_real_escape_string($db,$_POST['runningTime']);
+                        $myrating = mysqli_real_escape_string($db,$_POST['rating']);
+                        $myplot = mysqli_real_escape_string($db,$_POST['moviePlot']);
+                        $myactors = mysqli_real_escape_string($db,$_POST['actors']);
+                        $mydirector = mysqli_real_escape_string($db,$_POST['director']);
+                        $myprodcompany = mysqli_real_escape_string($db,$_POST['productionCompany']);
+                        $mystartdate = mysqli_real_escape_string($db,$_POST['startDate']);
+                        $myenddate = mysqli_real_escape_string($db,$_POST['endDate']);
+
+                        // PRODUCER TABLE
+                        $mysuppliername = mysqli_real_escape_string($db,$_POST['supplierName']);
+                        $mysupplierstreetnum = mysqli_real_escape_string($db,$_POST['supplierStreetNum']);
+                        $mysupplierstreetname = mysqli_real_escape_string($db,$_POST['supplierStreetName']);
+                        $mysuppliercity = mysqli_real_escape_string($db,$_POST['supplierCity']);
+                        $mysupplierprovince = mysqli_real_escape_string($db,$_POST['supplierProvince']);
+                        $mysupplierpostalcode = mysqli_real_escape_string($db,$_POST['supplierPostalCode']);
+                        $mycontactname = mysqli_real_escape_string($db,$_POST['supplierContactName']);
+                        $mySupplierNumber = mysqli_real_escape_string($db,$_POST['supplierNumber']);
+                        
+                        // GET MAX
+                        $maxMovieResult = mysqli_query($db, "SELECT MAX(movieID) AS max FROM `movie`" );
+					    $maxMovieRow = mysqli_fetch_assoc($maxMovieResult);
+                        $maxMovieID = $maxMovieRow['max'] + 1;
+                        
+                        $maxSupplierResult = mysqli_query($db, "SELECT MAX(supplierID) AS max FROM `supplier`" );
+					    $maxSupplierRow = mysqli_fetch_assoc($maxSupplierResult);
+                        $maxSupplierID = $maxSupplierRow['max'] + 1;
+
+                        // Adding
+                        $supplierQuery = "INSERT INTO supplier (supplierID, supplierName, streetNum, streetName, city, province, postalCode, contactName) VALUES ('$maxSupplierID', '$mysuppliername', '$mysupplierstreetnum', '$mysupplierstreetname', '$mysuppliercity', '$mysupplierprovince', '$mysupplierpostalcode', '$mysuppliername')";
+                        mysqli_query($db,$supplierQuery);
+                        $supplierPhoneQuery = "INSERT INTO supplierphonenum (supplierID, phoneNum) VALUE ('$maxSupplierID', '$mySupplierNumber')";
+                        mysqli_query($db,$supplierPhoneQuery);
+
+                        $movieQuery = "INSERT INTO movie (movieID, movieTitle, runningTime, rating, plot, actors, director, productionCompany, supplierID, startDate, endDate) VALUES ('$maxMovieID', '$mytitle', '$myrunningtime', '$myrating', '$myplot', '$myactors', '$mydirector', '$myprodcompany', '$maxSupplierID', $mystartdate, $myenddate)";
+                        mysqli_query($db,$movieQuery);
+                    }
                 
 				
 			?>
         </ul>
         </div>
             <div style="padding:20px;margin-top:30px;height:1500px;">
-            
+            <h1 style="text-align:center">Add New Movie</h1>
+                <form action = "" method = "post">
+                    <h2>Movie Info</h2>
+                    <input type = "text" name = "movieTitle" placeholder="Movie Title"/><br>
+                    <input type = "number" name = "runningTime" placeholder="Running Time (minutes)"/><br>
+                    <input type = "text" name = "rating" placeholder="Rating (G/PG/R)"/><br>
+                    <textarea id='reviewBox' type='text' name='moviePlot' placeholder='Movie Plot'></textarea><br>
+                    <textarea id='reviewBox' type='text' name='actors' placeholder='Actors'></textarea><br>
+                    <input type = "text" name = "director" placeholder="Director"/><br>
+                    <input type = "text" name = "productionCompany" placeholder="Production Company"/><br>
+                    <p>Start Date:</p>
+                    <input type = "date" name = "startDate"/><br>
+                    <p>End Date:</p>
+                    <input type = "date" name = "endDate"/><br><br>
+                    <p>Movie Cover</p>
+                    <input type="file" name="moviePicture" accept=".jpg"><br><br>
 
-            
+                    <h2>Supplier Info</h2>
+                    <input type = "text" name = "supplierName" placeholder="Supplier Name"/><br>
+                    <input type = "text" name = "supplierStreetNum" placeholder="Street Number"/><br>
+                    <input type = "text" name = "supplierStreetName" placeholder="Street Name"/><br>
+                    <input type = "text" name = "supplierCity" placeholder="City"/><br>
+                    <input type = "text" name = "supplierProvince" placeholder="Province"/><br>
+                    <input type = "text" name = "supplierPostalCode" placeholder="Postal Code"/><br>
+                    <input type = "text" name = "supplierContactName" placeholder="Contact Name"/><br>
+                    <input type = "text" name = "supplierNumber" placeholder="Phone Number"/><br>
+                    <br>
+                    <input type="submit">
+                </form>
             </div>
     </body>
 </html>
