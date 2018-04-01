@@ -15,15 +15,15 @@ Members:
 
 [-] browse movies playing at the various theatre complexes.
 
-[-] purchase some number of tickets for one or more movies showing at one or more theatres
+[X] purchase some number of tickets for one or more movies showing at one or more theatres
 
-[ ] view their purchases
+[X] view their purchases
 
-[ ] cancel a purchase
+[X] cancel a purchase
 
 [X] update their personal details -- ie. modify their profile
 
-[ ] browse their past rentals.
+[X] browse their past rentals.
 
 [X] add a review for a movie.
 
