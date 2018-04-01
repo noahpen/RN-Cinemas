@@ -40,9 +40,7 @@ Administrators:
 
 [-] add movies to the database
 
-[-] update where/when movies are showing
-    - need to fix add showing query
-    - 
+[X] update where/when movies are showing
 
 [ ] for a particular customer, show their rental history (including current tickets held)
 
