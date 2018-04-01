@@ -35,13 +35,14 @@
         </div>
             <div style="padding:20px;margin-top:30px;height:1500px;">
 				<div class="userOptions">
-            		<button type="button" onclick="location.href='admin/admin-list-members.php';" name="view">List Members</button>
-            		<button type="button" onclick="location.href='admin/admin-add-movie.php';"name="update">Add Movie</button>
-            		<button type="button" onclick="location.href='update-info.php';"name="update">Add Showing</button>
-					<button type="button" onclick="location.href='update-info.php';"name="update">Modify Showing</button>
-					<button type="button" onclick="location.href='update-info.php';"name="update">Customer Search</button>
-					<button type="button" onclick="location.href='update-info.php';"name="update">Movie Stats</button>
-					<button type="button" onclick="location.href='update-info.php';"name="update">Complex Stats</button>
+            		<button type="button" onclick="location.href='admin/admin-list-members.php';" name="listbtn">List Members</button>
+            		<button type="button" onclick="location.href='admin/admin-add-movie.php';"name="addmoviebtn">Add Movie</button>
+					<button type="button" onclick="location.href='admin/admin-add-complex.php';"name="addcomplexbtn">Add Complex</button>
+            		<button type="button" onclick="location.href='admin/admin-add-showing.php';"name="addshowingbtn">Add Showing</button>
+					<button type="button" onclick="location.href='admin/admin-display-showings.php';"name="displayshowingsbtn">Modify Showing</button>
+					<button type="button" onclick="location.href='admin/admin-customer-search.php';"name="customersearchbtn">Customer Search</button>
+					<button type="button" onclick="location.href='admin/admin-movie-stats.php';"name="moviestatsbtn">Movie Stats</button>
+					<button type="button" onclick="location.href='admin/admin-complex-stats.php';"name="complexstatsbtn">Complex Stats</button>
         		</div>
             </div>
     </body>

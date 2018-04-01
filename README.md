@@ -35,11 +35,12 @@ Administrators:
 
 [X] remove a member
 
-[ ] add or update the information for a theatre complex/theatre
+[-] add or update the information for a theatre complex/theatre
+    - add complex done
 
-[ ] add movies to the database
+[-] add movies to the database
 
-[ ] update where/when movies are showing
+[X] update where/when movies are showing
 
 [ ] for a particular customer, show their rental history (including current tickets held)
 
