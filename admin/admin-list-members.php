@@ -10,7 +10,7 @@
 	<body>
 		<div class="navBar">
 		<ul>
-			<li><a href="index.php">Home</a></li>
+			<li><a href="../index.php">Home</a></li>
             <?php 
 				if(!isset($_SESSION['login_user'])){
 					header("location: ../index.php");

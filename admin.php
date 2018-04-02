@@ -38,6 +38,7 @@
             		<button type="button" onclick="location.href='admin/admin-list-members.php';" name="listbtn">List Members</button>
             		<button type="button" onclick="location.href='admin/admin-add-movie.php';"name="addmoviebtn">Add Movie</button>
 					<button type="button" onclick="location.href='admin/admin-add-complex.php';"name="addcomplexbtn">Add Complex</button>
+					<button type="button" onclick="location.href='admin/admin-add-theatre.php';"name="addtheatrebtn">Add Theatre</button>
             		<button type="button" onclick="location.href='admin/admin-add-showing.php';"name="addshowingbtn">Add Showing</button>
 					<button type="button" onclick="location.href='admin/admin-display-showings.php';"name="displayshowingsbtn">Modify Showing</button>
 					<button type="button" onclick="location.href='admin/admin-customer-search.php';"name="customersearchbtn">Customer Search</button>
