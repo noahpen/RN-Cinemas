@@ -95,7 +95,7 @@
                         <td>$userRow[postalCode]</td>
                         <td>$userRow[email]</td>
                         <td>$userRow[adminFlag]</td>
-                        <td><input type='radio' name='accountID' value='$userRow[accountID]' />
+                        <td><input type='radio' name='accountID' value='$userRow[accountID]' required/>
                     </tr>
                     ";
                     }

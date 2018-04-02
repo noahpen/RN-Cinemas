@@ -89,29 +89,29 @@
             <h1 class="header" align="center">Add New Movie</h1>
                 <form action="upload.php" method="post" enctype="multipart/form-data">
                     <h2>Movie Info</h2>
-                    <input type = "text" name = "movieTitle" placeholder="Movie Title"/><br>
-                    <input type = "number" name = "runningTime" placeholder="Running Time (minutes)"/><br>
-                    <input type = "text" name = "rating" placeholder="Rating (G/PG/R)"/><br>
-                    <textarea id='reviewBox' type='text' name='moviePlot' placeholder='Movie Plot'></textarea><br>
-                    <textarea id='reviewBox' type='text' name='actors' placeholder='Actors'></textarea><br>
-                    <input type = "text" name = "director" placeholder="Director"/><br>
-                    <input type = "text" name = "productionCompany" placeholder="Production Company"/><br>
+                    <input type = "text" name = "movieTitle" placeholder="Movie Title" required/><br>
+                    <input type = "number" name = "runningTime" placeholder="Running Time (minutes)" required/><br>
+                    <input type = "text" name = "rating" placeholder="Rating (G/PG/R)" required/><br>
+                    <textarea id='reviewBox' type='text' name='moviePlot' placeholder='Movie Plot' required></textarea><br>
+                    <textarea id='reviewBox' type='text' name='actors' placeholder='Actors' required></textarea><br>
+                    <input type = "text" name = "director" placeholder="Director" required/><br>
+                    <input type = "text" name = "productionCompany" placeholder="Production Company" required/><br>
                     <p>Start Date:</p>
-                    <input type = "date" name = "startDate"/><br>
+                    <input type = "date" name = "startDate" required/><br>
                     <p>End Date:</p>
-                    <input type = "date" name = "endDate"/><br><br>
+                    <input type = "date" name = "endDate" required/><br><br>
                     <p>Movie Cover</p>
                     <input type="file" name="fileToUpload" id="fileToUpload"><br><br>
 
                     <h2>Supplier Info</h2>
-                    <input type = "text" name = "supplierName" placeholder="Supplier Name"/><br>
-                    <input type = "text" name = "supplierStreetNum" placeholder="Street Number"/><br>
-                    <input type = "text" name = "supplierStreetName" placeholder="Street Name"/><br>
-                    <input type = "text" name = "supplierCity" placeholder="City"/><br>
-                    <input type = "text" name = "supplierProvince" placeholder="Province"/><br>
-                    <input type = "text" name = "supplierPostalCode" placeholder="Postal Code"/><br>
-                    <input type = "text" name = "supplierContactName" placeholder="Contact Name"/><br>
-                    <input type = "text" name = "supplierNumber" placeholder="Phone Number"/><br>
+                    <input type = "text" name = "supplierName" placeholder="Supplier Name" required/><br>
+                    <input type = "text" name = "supplierStreetNum" placeholder="Street Number" required/><br>
+                    <input type = "text" name = "supplierStreetName" placeholder="Street Name" required/><br>
+                    <input type = "text" name = "supplierCity" placeholder="City" required/><br>
+                    <input type = "text" name = "supplierProvince" placeholder="Province" required/><br>
+                    <input type = "text" name = "supplierPostalCode" placeholder="Postal Code" required/><br>
+                    <input type = "text" name = "supplierContactName" placeholder="Contact Name" required/><br>
+                    <input type = "text" name = "supplierNumber" placeholder="Phone Number" required/><br>
                     <br>
                     <button type="submit" class="submitButton"><span>Submit Movie</span></button>
                 </form>

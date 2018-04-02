@@ -74,7 +74,7 @@
                         <td>$userRow[complexName]</td>
                         <td>$userRow[numSeats]</td>
                         <td>$userRow[screenSize]</td>
-                        <td><input type='radio' name='theatreID' value='$userRow[theatreID]' /></td>
+                        <td><input type='radio' name='theatreID' value='$userRow[theatreID]' required/></td>
                     </tr>
                     ";
                     }

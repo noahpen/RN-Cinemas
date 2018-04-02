@@ -43,35 +43,35 @@
                     if(isset($_POST['modifyComplex'])){
                         echo "<form action='admin-display-complexes.php' method='post'>";
                         echo "<p>Complex ID: &nbsp;
-                              <input type='text' name='sameComplexID' value='$myComplexID' readonly='readonly' /></br>
+                              <input type='text' name='sameComplexID' value='$myComplexID' readonly='readonly' required/></br>
                               </p>";
                         echo "<p>Complex Name: &nbsp;
-                              <input type = 'text' name = 'complexName' placeholder='Complex Name' value='$row[complexName]' size='40'/></br>
+                              <input type = 'text' name = 'complexName' placeholder='Complex Name' value='$row[complexName]' size='40' required/></br>
                               </p>";
 
                         echo "<p>Number of Theatres: &nbsp;";
                         $numTheatreQuery = "SELECT numTheatres FROM complex";
                         $numTheatreResult = mysqli_query($db,$numTheatreQuery);
-                        echo "<input type='number' name='numTheatres' placeholder='0' value='$row[numTheatres]' /></br>";
+                        echo "<input type='number' name='numTheatres' placeholder='0' value='$row[numTheatres]' required/></br>";
 
                         echo "<p>Street Number: &nbsp;
-                              <input type = 'number' name = 'streetNum' placeholder='0' value='$row[streetNum]'/></br>
+                              <input type = 'number' name = 'streetNum' placeholder='0' value='$row[streetNum]' required/></br>
                               </p>";
 
                         echo "<p>Street Name: &nbsp;
-                              <input type = 'text' name = 'streetName' placeholder='Street Name' value='$row[streetName]' size='25'/></br>
+                              <input type = 'text' name = 'streetName' placeholder='Street Name' value='$row[streetName]' size='25' required/></br>
                               </p>";
           
                         echo "<p>City: &nbsp;
-                              <input type = 'text' name = 'city' placeholder='City' value='$row[city]'/></br>
+                              <input type = 'text' name = 'city' placeholder='City' value='$row[city]' required/></br>
                               </p>";
 
                         echo "<p>Province: &nbsp;
-                              <input type = 'text' name = 'province' placeholder='Province' value='$row[province]'/></br>
+                              <input type = 'text' name = 'province' placeholder='Province' value='$row[province]' required/></br>
                               </p>";
 
                         echo "<p>Postal Code: &nbsp;
-                              <input type = 'text' name = 'postalCode' placeholder='Postal Code' value='$row[postalCode]'/></br>
+                              <input type = 'text' name = 'postalCode' placeholder='Postal Code' value='$row[postalCode]' required/></br>
                               </p>";
 
                         echo "<button type='submit' class='submitButton'><span>Update Complex $myComplexID</span></button>";

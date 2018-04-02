@@ -96,15 +96,15 @@
                     </p>
 
                     <p>Theatre ID: &nbsp;
-                    <input type = "number" name = "theatreID" placeholder="1"/><br>
+                    <input type = "number" name = "theatreID" placeholder="1" required/><br>
                     </p>
 
                     <p>Date: &nbsp;
-                    <input type = "date" name = "date"/><br>
+                    <input type = "date" name = "date" required/><br>
                     </p>
 
                     <p>Time: &nbsp;
-                    <input type = 'text' name = 'startTime' placeholder='hh:mm'/></br>
+                    <input type = 'text' name = 'startTime' placeholder='hh:mm' required/></br>
                     </p>
 
                     <button type="submit" class="submitButton"><span>Submit Showing</span></button>
