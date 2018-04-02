@@ -66,7 +66,7 @@
             <div class="formOutside">
             <h1 align="center">RN Cinema Members</h1>
             <form method="post">
-		        <table align="center" class="buyTicketsMovieList">
+		        <table align="center" class="buyTicketsMovieList table">
                     <tr>
                         <th>AccountID</th>
                         <th>Username</th>

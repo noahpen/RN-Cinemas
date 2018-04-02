@@ -57,7 +57,7 @@
 			<h1 class="header" align="center" style="margin-top:100px;">Modify Theatre</h1>
             <div style="padding:20px;height:1500px;">
             <form method="post" action="admin-modify-theatre.php">
-		        <table align="center" class="buyTicketsMovieList">
+		        <table align="center" class="buyTicketsMovieList table">
                     <tr>
                         <th>Theatre ID</th>
                         <th>Theatre Number</th>

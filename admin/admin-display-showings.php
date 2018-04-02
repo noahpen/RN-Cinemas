@@ -61,7 +61,7 @@
 			<h1 class="header" align="center" style="margin-top:100px;">Modify Showings</h1>
             <div style="padding:20px;height:1500px;">
             <form method="post" action="admin-modify-showing.php">
-		        <table align="center" class="buyTicketsMovieList">
+		        <table align="center" class="buyTicketsMovieList table">
                     <tr>
                         <th>Showing ID</th>
                         <th>Complex</th>
