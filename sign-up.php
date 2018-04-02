@@ -64,16 +64,16 @@
 
 				<h2>About You</h2>
 				<input type = "text" name = "firstName" placeholder="First Name" required/>
-				<input type = "text" name = "lastName" placeholder="Last Name" required/><br /><br />
+				<input type = "text" name = "lastName" placeholder="Last Name" required/><br />
 				<input type = "text" name = "streetNum" placeholder="Street Number" required/>
-				<input type = "text" name = "streetName" placeholder="Street Name" required/><br /><br />
-				<input type = "text" name = "city" placeholder="City" required/><br /><br />
-				<input type = "text" name = "province" placeholder="Province" required/><br /><br />
-				<input type = "text" name = "postalCode" placeholder="Postal Code" required/><br /><br />
-				<input type = "email" name = "email" placeholder="E-Mail" required/><br /><br />
+				<input type = "text" name = "streetName" placeholder="Street Name" required/><br />
+				<input type = "text" name = "city" placeholder="City" required/><br />
+				<input type = "text" name = "province" placeholder="Province" required/><br />
+				<input type = "text" name = "postalCode" placeholder="Postal Code" required/><br />
+				<input type = "email" name = "email" placeholder="E-Mail" required/><br />
 
 				<h2>Payment Information</h2>
-				<input type = "text" name = "creditNum" placeholder="Credit Card Number" required/><br /><br />
+				<input type = "text" name = "creditNum" placeholder="Credit Card Number" required/><br />
 				<input type = "text" name = "creditExp" placeholder="Credit Card Expiry" required/><br /><br />
 				<button type = 'submit' class='submitButton'><span>Sign Up</span></button><br />
 				

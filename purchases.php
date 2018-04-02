@@ -67,7 +67,7 @@
 			echo "<h2 id='accountHeader'>$login_session_fname's Purchases</h2>";
 		?>
 		<form method="post">
-		<table align="center" class="buyTicketsMovieList">
+		<table align="center" class="buyTicketsMovieList table">
 		<tr>
 			<th>Movie</th>
 			<th>Complex</th>
@@ -108,8 +108,8 @@
 
 		?>
 		<br>
-		<input type='number' placeholder='Number of Tickets' name='numCancel'>
-        <button type='submit'>Cancel</button>
+		<input type='number' placeholder='Number of Tickets' name='numCancel' required>
+        <button type='submit' class='submitButton'><span>Cancel</span></button>
 
 		</form>
 

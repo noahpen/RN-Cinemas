@@ -84,16 +84,16 @@
 
 				<h2>About You</h2>
 				<input type = 'text' name = 'firstName' value='$accountRow[firstName]'/>
-				<input type = 'text' name = 'lastName' value='$accountRow[lastName]'/><br /><br />
+				<input type = 'text' name = 'lastName' value='$accountRow[lastName]'/><br />
 				<input type = 'text' name = 'streetNum' value='$accountRow[streetNum]'/>
-				<input type = 'text' name = 'streetName' value='$accountRow[streetName]'/><br /><br />
-				<input type = 'text' name = 'city' value='$accountRow[city]'/><br /><br />
-				<input type = 'text' name = 'province' value='$accountRow[province]'/><br /><br />
-				<input type = 'text' name = 'postalCode' value='$accountRow[postalCode]'/><br /><br />
-				<input type = 'email' name = 'email' value='$accountRow[email]'/><br /><br />
+				<input type = 'text' name = 'streetName' value='$accountRow[streetName]'/><br />
+				<input type = 'text' name = 'city' value='$accountRow[city]'/><br />
+				<input type = 'text' name = 'province' value='$accountRow[province]'/><br />
+				<input type = 'text' name = 'postalCode' value='$accountRow[postalCode]'/><br />
+				<input type = 'email' name = 'email' value='$accountRow[email]'/><br />
 
 				<h2>Payment Information</h2>
-				<input type = 'text' name = 'creditNum' value='$accountRow[creditNum]'/><br /><br />
+				<input type = 'text' name = 'creditNum' value='$accountRow[creditNum]'/><br />
 				<input type = 'text' name = 'creditExp' value='$accountRow[creditExp]'/><br /><br />
 				<button type = 'submit' class='submitButton'><span>Update Profile</span></button><br />";
 				?>
