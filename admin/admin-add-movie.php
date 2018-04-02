@@ -28,9 +28,18 @@
                         header("location: ../index.php");
                     }
                     }
-                    
+                    /*
                     if($_SERVER["REQUEST_METHOD"] == "POST") {
-                        $file = $_FILES['moviePicture']['tmp_name'];
+                        //$file = $_FILES['moviePicture']['tmp_name'];
+
+                        //$target_dir = "uploads/";
+                        //$target_file = $target_dir . basename($_FILES["moviePicture"]["name"]);
+
+                        //if (move_uploaded_file($_FILES["moviePicture"]["tmp_name"], $target_file)) {
+                        //    echo "The file ". basename( $_FILES["moviePicture"]["name"]). " has been uploaded.";
+                        //} else {
+                        //    echo "Sorry, there was an error uploading your file.";
+                        //}
 
                         // MOVIE TABLE
                         $mytitle = mysqli_real_escape_string($db,$_POST['movieTitle']);
@@ -70,7 +79,7 @@
 
                         $movieQuery = "INSERT INTO movie (movieID, movieTitle, runningTime, rating, plot, actors, director, productionCompany, supplierID, startDate, endDate) VALUES ('$maxMovieID', '$mytitle', '$myrunningtime', '$myrating', '$myplot', '$myactors', '$mydirector', '$myprodcompany', '$maxSupplierID', $mystartdate, $myenddate)";
                         mysqli_query($db,$movieQuery);
-                    }
+                    }*/
                 
 				
 			?>
@@ -78,7 +87,7 @@
         </div>
             <div style="padding:20px;margin-top:30px;height:1500px;">
             <h1 class="header" align="center">Add New Movie</h1>
-                <form action = "" method = "post">
+                <form action="upload.php" method="post" enctype="multipart/form-data">
                     <h2>Movie Info</h2>
                     <input type = "text" name = "movieTitle" placeholder="Movie Title"/><br>
                     <input type = "number" name = "runningTime" placeholder="Running Time (minutes)"/><br>
@@ -92,7 +101,7 @@
                     <p>End Date:</p>
                     <input type = "date" name = "endDate"/><br><br>
                     <p>Movie Cover</p>
-                    <input type="file" name="moviePicture" accept=".jpg"><br><br>
+                    <input type="file" name="fileToUpload" id="fileToUpload"><br><br>
 
                     <h2>Supplier Info</h2>
                     <input type = "text" name = "supplierName" placeholder="Supplier Name"/><br>
