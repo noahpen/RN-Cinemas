@@ -11,6 +11,7 @@
 		<div class="navBar">
 		<ul>
 			<li><a class="active" href="index.php">Home</a></li>
+			<li><a href="movies.php">Movies</a></li>
 			<?php 
 				if(!isset($_SESSION['login_user'])){
 					echo "<li style='float:right'><a href = 'login.php'>Login</a></li>";
