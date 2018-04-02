@@ -3,8 +3,8 @@
    session_start();
    
    if(!isset($_SESSION['login_user'])){
-		echo "<li><a href = 'login.php'>Login</a></li>";
-		echo "<li><a class='active' href = 'sign-up.php'>Sign Up</a></li>";
+		//echo "<li><a href = 'login.php'>Login</a></li>";
+		//echo "<li><a class='active' href = 'sign-up.php'>Sign Up</a></li>";
 	}
 	else{
 		header("location: index.php");
@@ -38,9 +38,10 @@
    }
 ?>
 <html>
-   
-   <head>
+    <head>
       <title>Login Page</title>
+      <link rel='stylesheet' type='text/css' href='assets/css/main.css' />
+      <!--
       <style type = "text/css">
          body {
             font-family:Arial, Helvetica, sans-serif;
@@ -55,11 +56,23 @@
             border:#666666 solid 1px;
          }
       </style>
+        -->
       
-   </head>
-   
-   <body bgcolor = "#FFFFFF">
-	
+    </head>
+    <body class="loginBody">
+
+    <div class="login-page">
+        <h1 align="center" id="bigHeader">RN CINEMAS</h1>
+        <div class="form">
+            <form class="login-form" action ="" method="post">
+                <input type="text" name="username" placeholder="username"/>
+                <input type="password" name="password" placeholder="password"/>
+                <button type="submit">login</button>
+                <p class="message">Not registered? <a href="sign-up.php">Create an account</a></p>
+            </form>
+        </div>
+    </div>
+	<!--
       <div align = "center">
          <div style = "width:300px; border: solid 1px #333333; " align = "left">
             <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Login</b></div>
@@ -79,6 +92,7 @@
          </div>
 			
       </div>
+        -->
 
    </body>
 </html>
