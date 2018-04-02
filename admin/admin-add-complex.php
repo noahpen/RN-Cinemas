@@ -27,10 +27,11 @@
                         header("location: ../index.php");
                     }
                     }
+
+                    $success = false;
                     
                     if($_SERVER["REQUEST_METHOD"] == "POST") {
 
-                        // MOVIE TABLE
                         $name = mysqli_real_escape_string($db,$_POST['complexName']);
                         $numTheatres = mysqli_real_escape_string($db,$_POST['numTheatres']);
                         $streetNum = mysqli_real_escape_string($db,$_POST['streetNum']);
@@ -45,7 +46,11 @@
                         $maxComplexID = $maxComplexRow['max'] + 1;
 
                         $complexQuery = "INSERT INTO complex (complexID, numTheatres, complexName, streetNum, streetName, city, province, postalCode) VALUES ('$maxComplexID', '$numTheatres', '$name', '$streetNum', '$streetName', '$city', '$province', '$postal')";
-                        mysqli_query($db,$complexQuery);
+                        $result = mysqli_query($db,$complexQuery);
+
+                        if($result) {
+                            $success = true;
+                        }
                     }
                 
 				
@@ -88,6 +93,11 @@
                     </p>
                     <input type="submit">
                 </form>
+                <?php
+                    if ($success) {
+                        echo "</br>Complex $name created successfully!";
+                    }
+                ?>
             </div>
     </body>
 </html>

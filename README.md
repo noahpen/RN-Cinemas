@@ -38,13 +38,13 @@ Administrators:
 [-] add or update the information for a theatre complex/theatre
     - add complex done
 
-[-] add movies to the database
+[X] add movies to the database
 
 [X] update where/when movies are showing
 
 [X] for a particular customer, show their rental history (including current tickets held)
 
-[ ] find the movie that is the most popular (ie. has sold the most tickets across all theatres).
+[X] find the movie that is the most popular (ie. has sold the most tickets across all theatres).
 
-[ ] find the theatre complex that is most popular (ie. has sold the most tickets across all movies)
+[X] find the theatre complex that is most popular (ie. has sold the most tickets across all movies)
 

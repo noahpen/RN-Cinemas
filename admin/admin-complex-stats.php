@@ -32,8 +32,38 @@
         </div>
 
         <div style="padding:20px;margin-top:30px;height:1500px;">
-        <h1 class="header" align="center">Complex Stats</h1>
-
+        <h1 class="header" align="center" style='margin-bottom:30px;'>Complex Stats</h1>
+			<?php
+				$complexQuery = "SELECT complex.complexName, COUNT(showing.showingID) AS ticketCount FROM tickets 
+							   INNER JOIN showing ON tickets.showingID=showing.showingID INNER JOIN theatre 
+							   ON theatre.theatreID=showing.theatreID INNER JOIN complex ON complex.complexID=theatre.complexID 
+							   GROUP BY complex.complexName ORDER BY `ticketCount` DESC";
+				$complexResult = mysqli_query($db,$complexQuery);
+				$topComplexQuery = $complexQuery . " LIMIT 1";
+				$topComplexResult = mysqli_query($db,$topComplexQuery);
+				$topComplex = mysqli_fetch_assoc($topComplexResult)['complexName']; 
+				echo "
+                    <div>
+                    <table align='center' class='buyTicketsMovieList'>
+                    <tr>
+                        <th>Complex</th>
+                        <th>Tickets Sold</th>
+                    </tr>
+                    ";
+                while ($row = mysqli_fetch_array($complexResult)) {
+                    echo "
+                    <tr>
+                        <th>$row[complexName]</th>
+                        <th>$row[ticketCount]</th>
+                    </tr>
+                    ";
+                }
+                echo "</table>
+					</div>";
+				echo "</br><h3 align='center'>The most popular complex is " . $topComplex;
+			?>
         </div>
+
+    
     </body>
 </html> 
