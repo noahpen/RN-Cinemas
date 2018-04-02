@@ -72,11 +72,11 @@
                     </p>
                     
                     <p>Theatre Number: &nbsp;
-                    <input type = "number" name = "theatreNum" placeholder="Theatre Num"/><br>
+                    <input type = "number" name = "theatreNum" placeholder="Theatre Num" required/><br>
                     </p>
 
                     <p>Number of Seats: &nbsp;
-                    <input type = "number" name = "numSeats" placeholder="Num Seats"/><br>
+                    <input type = "number" name = "numSeats" placeholder="Num Seats" required/><br>
                     </p>
 
                     <p>Screen Size: &nbsp;

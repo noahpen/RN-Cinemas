@@ -44,10 +44,10 @@
                     if(isset($_POST['modifyTheatre'])){
                         echo "<form action='admin-display-theatres.php' method='post'>";
                         echo "<p>Theatre ID: &nbsp;
-                              <input type='text' name='sameTheatreID' value='$myTheatreID' readonly='readonly' /></br>
+                              <input type='text' name='sameTheatreID' value='$myTheatreID' readonly='readonly' required/></br>
                               </p>";
                         echo "<p>Theatre Number: &nbsp;
-                              <input type = 'number' name = 'theatreNum' placeholder='Theatre Number' value='$row[theatreNum]' /></br>
+                              <input type = 'number' name = 'theatreNum' placeholder='Theatre Number' value='$row[theatreNum]' required/></br>
                               </p>";
 
                         echo "<p>Complex Name: &nbsp;";
@@ -60,7 +60,7 @@
                         echo "</select>";
 
                         echo "<p>Number of Seats: &nbsp;
-                              <input type = 'number' name = 'numSeats' placeholder='1' value='$row[numSeats]'/></br>
+                              <input type = 'number' name = 'numSeats' placeholder='1' value='$row[numSeats]' required/></br>
                               </p>";
 
                         echo "<p>Screen Size: &nbsp;

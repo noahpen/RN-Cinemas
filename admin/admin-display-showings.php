@@ -78,7 +78,7 @@
                         <td>$userRow[theatreID]</td>
                         <td>$userRow[movieTitle]</td>
                         <td>$userRow[startTime]</td>
-                        <td><input type='radio' name='showingID' value='$userRow[showingID]' />
+                        <td><input type='radio' name='showingID' value='$userRow[showingID]' required/>
                     </tr>
                     ";
                     }

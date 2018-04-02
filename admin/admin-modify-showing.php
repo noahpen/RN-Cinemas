@@ -40,7 +40,7 @@
                     if(isset($_POST['modifyShowing'])){
                         echo "<form action='admin-display-showings.php' method='post'>";
                         echo "<p>Showing ID: &nbsp;
-                              <input type='text' name='sameShowingID' value='$myShowingID' readonly='readonly' /></br>
+                              <input type='text' name='sameShowingID' value='$myShowingID' readonly='readonly' required/></br>
                               </p>";
                         echo "<p>Complex Name: &nbsp;";
                         $complexQuery = "SELECT complexName FROM complex";
@@ -61,15 +61,15 @@
                         echo "</select>";
 
                         echo "<p>Theatre ID: &nbsp;
-                              <input type = 'number' name = 'theatreID' placeholder='0'/></br>
+                              <input type = 'number' name = 'theatreID' placeholder='0' required/></br>
                               </p>";
 
                         echo "<p>Date: &nbsp;
-                              <input type = 'date' name = 'date'/></br>
+                              <input type = 'date' name = 'date' required/></br>
                               </p>";
           
                         echo "<p>Time: &nbsp;
-                              <input type = 'text' name = 'startTime' placeholder='hh:mm'/></br>
+                              <input type = 'text' name = 'startTime' placeholder='hh:mm' required/></br>
                               </p>";
 
                         echo "<button type='submit' class='submitButton'><span>Update Showing $myShowingID</span></button>";

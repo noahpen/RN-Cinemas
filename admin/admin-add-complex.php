@@ -64,33 +64,33 @@
                     <h2>Complex Info</h2>
                     
                     <p>Complex Name: &nbsp;
-                    <input type = "text" name = "complexName" placeholder="Complex"/><br>
+                    <input type = "text" name = "complexName" placeholder="Complex" required/><br>
                     </p>
 
                     <p>Number of Theatres: &nbsp;
-                    <input type = "number" name = "numTheatres" placeholder="Num Theatres"/><br>
+                    <input type = "number" name = "numTheatres" placeholder="Num Theatres" required/><br>
                     </p>
 
                     <h2>Address Info</h2>
 
                     <p>Street Number: &nbsp;
-                    <input type = "number" name = "streetNum" placeholder="Street Num"/><br>
+                    <input type = "number" name = "streetNum" placeholder="Street Num" required/><br>
                     </p>
 
                     <p>Street Name: &nbsp;
-                    <input type = "text" name = "streetName" placeholder="Street Name"/><br>
+                    <input type = "text" name = "streetName" placeholder="Street Name" required/><br>
                     </p>
 
                     <p>City: &nbsp;
-                    <input type = "text" name = "city" placeholder="City"/><br>
+                    <input type = "text" name = "city" placeholder="City" required/><br>
                     </p>
 
                     <p>Province: &nbsp;
-                    <input type = "text" name = "province" placeholder="Province"/><br>
+                    <input type = "text" name = "province" placeholder="Province" required/><br>
                     </p>
 
                     <p>Postal Code: &nbsp;
-                    <input type = "text" name = "postalCode" placeholder="Postal Code"/><br>
+                    <input type = "text" name = "postalCode" placeholder="Postal Code" required/><br>
                     </p>
                     <button type="submit" class="submitButton"><span>Submit Complex</span></button>
                 </form>

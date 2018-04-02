@@ -80,7 +80,7 @@
                         <td>$userRow[city]</td>
                         <td>$userRow[province]</td>
                         <td>$userRow[postalCode]</td>
-                        <td><input type='radio' name='complexID' value='$userRow[complexID]' /></td>
+                        <td><input type='radio' name='complexID' value='$userRow[complexID]' required/></td>
                     </tr>
                     ";
                     }
