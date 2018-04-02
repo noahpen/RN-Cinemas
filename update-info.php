@@ -63,8 +63,9 @@
 				//header("location: login.php");
 			}
 		?>
-		<div class="updateForm">
-			<h1 class="header" align="center">Update Account Info</h1>
+		<div class="formOutside">
+			<div class="formInside">
+			<h1>Update Account Info</h1>
 			<form action = "" method = "POST">
 
 				<h2>Login Information</h2>
@@ -94,10 +95,11 @@
 				<h2>Payment Information</h2>
 				<input type = 'text' name = 'creditNum' value='$accountRow[creditNum]'/><br /><br />
 				<input type = 'text' name = 'creditExp' value='$accountRow[creditExp]'/><br /><br />
-				<input type = 'submit' value = 'Update Profile'/><br />";
+				<button type = 'submit' class='submitButton'><span>Update Profile</span></button><br />";
 				?>
 				
 			</form>
+		</div>
 		</div>
 	</body>
 </html>

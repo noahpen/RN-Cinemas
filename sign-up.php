@@ -47,7 +47,8 @@
 
 				?>
 		</ul>
-		<div style="padding:20px;margin-top:30px;height:1500px;">
+		<div class="formOutside">
+			<div class="formInside">
 			<h1 style="text-align:center">Cinema Sign Up Page</h1>
 			<form action = "" method = "post">
 
@@ -74,9 +75,10 @@
 				<h2>Payment Information</h2>
 				<input type = "text" name = "creditNum" placeholder="Credit Card Number"/><br /><br />
 				<input type = "text" name = "creditExp" placeholder="Credit Card Expiry"/><br /><br />
-				<input type = "submit" value = "Submit"/><br />
+				<button type = 'submit' class='submitButton'><span>Sign Up</span></button><br />
 				
 			</form>
+		</div>
 		</div>
 	</body>
 </html>

@@ -63,10 +63,9 @@
 			?>
         </ul>
         </div>
-            <div style="padding:20px;margin-top:30px;height:1500px;">
+            <div class="formOutside">
+            <h1 align="center">RN Cinema Members</h1>
             <form method="post">
-            <button type='submit' name='deleteUser'>Delete</button>
-                <button type='submit' name='toggleAdmin'>Toggle Admin</button>
 		        <table align="center" class="buyTicketsMovieList">
                     <tr>
                         <th>AccountID</th>
@@ -102,6 +101,10 @@
                     }
                     ?>
                 </table>
+                <div align="center" style="margin-top:20px;">
+                    <button type='submit' class="submitButton" name='deleteUser'><span>Delete</span></button>
+                    <button type='submit' class="submitButton" name='toggleAdmin'><span>Toggle Admin</span></button>
+                </div>
             </form>
             </div>
     </body>

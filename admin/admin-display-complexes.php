@@ -87,7 +87,7 @@
                     ?>
                 </table>
 				<div align="center" style="margin-top:20px;">
-					<button type='submit' name='modifyComplex'>Modify</button>
+					<button type='submit' name='modifyComplex' class='submitButton'><span>Modify</span></button>
 				</div>
             </form>
             </div>

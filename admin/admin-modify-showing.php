@@ -31,15 +31,17 @@
             ?>
             </ul>
             
-            <div style='padding:20px;margin-top:30px;'>           
+            <div class="formOutside">
+            <div class="formInside">          
             <?php
                 if($_SERVER["REQUEST_METHOD"] == "POST") {
                     $myShowingID = mysqli_real_escape_string($db,$_POST['showingID']);
-                    echo "<h2 class='header' align='center'>Modify Showing $myShowingID</h2>";
+                    echo "<h1 class='header' align='center'>Modify Showing $myShowingID</h1>";
                     if(isset($_POST['modifyShowing'])){
                         echo "<form action='admin-display-showings.php' method='post'>";
                         echo "<p>Showing ID: &nbsp;
-                              <input type='text' name='sameShowingID' value='$myShowingID' readonly='readonly' /></br>";
+                              <input type='text' name='sameShowingID' value='$myShowingID' readonly='readonly' /></br>
+                              </p>";
                         echo "<p>Complex Name: &nbsp;";
                         $complexQuery = "SELECT complexName FROM complex";
                         $complexResult = mysqli_query($db,$complexQuery);
@@ -70,13 +72,13 @@
                               <input type = 'text' name = 'startTime' placeholder='hh:mm'/></br>
                               </p>";
 
-                        echo "<input type='submit' value='Update Showing $myShowingID'>";
+                        echo "<button type='submit' class='submitButton'><span>Update Showing $myShowingID</span></button>";
                         echo "</form>";
                     }
  				}
                     //header("location: admin-modify-showing.php");
             ?>
-            </p>
+            </div>
             </div>
     </body>
 </html>

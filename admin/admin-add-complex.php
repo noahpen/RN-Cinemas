@@ -57,7 +57,8 @@
 			?>
         </ul>
         </div>
-            <div style="padding:20px;margin-top:30px;height:1500px;">
+            <div class="formOutside">
+            <div class="formInside">
             <h1 class="header" align="center">Add New Complex</h1>
                 <form action = "" method = "post">
                     <h2>Complex Info</h2>
@@ -91,13 +92,14 @@
                     <p>Postal Code: &nbsp;
                     <input type = "text" name = "postalCode" placeholder="Postal Code"/><br>
                     </p>
-                    <input type="submit">
+                    <button type="submit" class="submitButton"><span>Submit Complex</span></button>
                 </form>
                 <?php
                     if ($success) {
                         echo "</br>Complex $name created successfully!";
                     }
                 ?>
+            </div>
             </div>
     </body>
 </html>

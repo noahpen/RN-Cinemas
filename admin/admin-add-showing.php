@@ -66,7 +66,8 @@
 			?>
         </ul>
         </div>
-            <div style="padding:20px;margin-top:30px;height:1500px;">
+            <div class="formOutside">
+            <div class="formInside">
             <h1 class="header" align="center">Add New Showing</h1>
                 <form action = "" method = "post">
                     <h2>Showing Info</h2>
@@ -106,8 +107,9 @@
                     <input type = 'text' name = 'startTime' placeholder='hh:mm'/></br>
                     </p>
 
-                    <input type="submit">
+                    <button type="submit" class="submitButton"><span>Submit Showing</span></button>
                 </form>
+            </div>
             </div>
     </body>
 </html>

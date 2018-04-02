@@ -31,7 +31,8 @@
             ?>
             </ul>
             
-            <div style='padding:20px;margin-top:30px;'>           
+            <div class="formOutside">
+            <div class="formInside">          
             <?php
                 if($_SERVER["REQUEST_METHOD"] == "POST") {
                     $myTheatreID = mysqli_real_escape_string($db,$_POST['theatreID']);
@@ -43,7 +44,8 @@
                     if(isset($_POST['modifyTheatre'])){
                         echo "<form action='admin-display-theatres.php' method='post'>";
                         echo "<p>Theatre ID: &nbsp;
-                              <input type='text' name='sameTheatreID' value='$myTheatreID' readonly='readonly' /></br>";
+                              <input type='text' name='sameTheatreID' value='$myTheatreID' readonly='readonly' /></br>
+                              </p>";
                         echo "<p>Theatre Number: &nbsp;
                               <input type = 'number' name = 'theatreNum' placeholder='Theatre Number' value='$row[theatreNum]' /></br>
                               </p>";
@@ -69,13 +71,13 @@
                               </select>
                               </p>";
           
-                        echo "<input type='submit' value='Update Theatre $myTheatreID'>";
+                        echo "<button type='submit' class='submitButton'><span>Update Theatre $myTheatreID</span></button>";
                         echo "</form>";
                     }
  				}
                     //header("location: admin-modify-showing.php");
             ?>
-            </p>
+            </div>
             </div>
     </body>
 </html>
