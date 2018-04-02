@@ -36,7 +36,7 @@ mysqli_query($db,$supplierQuery);
 $supplierPhoneQuery = "INSERT INTO supplierphonenum (supplierID, phoneNum) VALUE ('$maxSupplierID', '$mySupplierNumber')";
 mysqli_query($db,$supplierPhoneQuery);
 
-$movieQuery = "INSERT INTO movie (movieID, movieTitle, runningTime, rating, plot, actors, director, productionCompany, supplierID, startDate, endDate) VALUES ('$maxMovieID', '$mytitle', '$myrunningtime', '$myrating', '$myplot', '$myactors', '$mydirector', '$myprodcompany', '$maxSupplierID', $mystartdate, $myenddate)";
+$movieQuery = "INSERT INTO movie (movieID, movieTitle, runningTime, rating, plot, actors, director, productionCompany, supplierID, startDate, endDate) VALUES ('$maxMovieID', '$mytitle', '$myrunningtime', '$myrating', '$myplot', '$myactors', '$mydirector', '$myprodcompany', '$maxSupplierID', '$mystartdate', '$myenddate')";
 mysqli_query($db,$movieQuery);
 
 // UPLOAD FILE START

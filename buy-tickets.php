@@ -11,6 +11,7 @@
       <div class="navBar">
          <ul>
             <li><a href="index.php">Home</a></li>
+            <li><a href="movies.php">Movies</a></li>
             <?php 
                $getMovieID = $_GET['movieID'];
                if(isset($_GET['complexID']) && !empty($_GET['complexID'])){
@@ -88,23 +89,42 @@
             if(isset($_GET['complexID']) && !empty($_GET['complexID'])){
                 $showingQuery = "SELECT * FROM showing INNER JOIN theatre ON showing.theatreID=theatre.theatreID AND showing.movieID=$getMovieID AND theatre.complexID=$getComplexID";
                 $showingResult = mysqli_query($db,$showingQuery);
+
+
+
                 while($showingRow = mysqli_fetch_assoc($showingResult)){
                     if ($showingRow['startTime'] > $current_datetime){
-                        echo "
-                        <tr>
-                            <td>$showingRow[startTime]<td>
-                            <td>$showingRow[theatreNum]<td>
-                            <td>$showingRow[numSeats]<td>
-                            <td><input type='radio' name='showingID' value='$showingRow[showingID]' />
-                        <tr>
-                        ";
+                        $showingTotalSeats = "SELECT showingID, COUNT(showingID) AS ticketsBought FROM tickets WHERE showingID = $showingRow[showingID] GROUP BY showingID";
+                        $showingTotalResult = mysqli_query($db,$showingTotalSeats);
+                        $showingTotalRow = mysqli_fetch_assoc($showingTotalResult);
+
+                        $avaliableSeats = $showingRow['numSeats'] - $showingTotalRow['ticketsBought'];
+                        if ($avaliableSeats > 0){
+                            echo "
+                            <tr>
+                                <td>$showingRow[startTime]<td>
+                                <td>$showingRow[theatreNum]<td>
+                                <td>$avaliableSeats<td>
+                                <td><input type='radio' name='showingID' value='$showingRow[showingID]' />
+                            <tr>
+                            ";
+                        }
+                        else{
+                            echo "
+                            <tr>
+                                <td>$showingRow[startTime]<td>
+                                <td>$showingRow[theatreNum]<td>
+                                <td>$avaliableSeats<td>
+                            <tr>
+                            ";
+                        }
                     }
                 }
             }
             ?>
         </table>
 
-            <input type='number' placeholder='Number of Tickets' name='numTickets'>
+            <input type='number' placeholder='Number of Tickets' min='1' name='numTickets'>
             <button type='submit'>Buy</button>
             </form>
 

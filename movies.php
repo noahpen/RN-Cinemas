@@ -31,6 +31,27 @@
 		</ul>
 			</div>
 		<div style="padding:20px;margin-top:30px;height:1500px;">
+        <div class="movieImagesFrame">
+            <?php
+                $imageCounter = 0;
+                $rowCounter = 0;
+                
+                $maxmovieIDresult = mysqli_query($db, "SELECT MAX(movieID) AS max FROM `movie`" );
+				$maxmovieIDrow = mysqli_fetch_assoc($maxmovieIDresult);
+				$maxmovieID = $maxmovieIDrow['max'];
+
+                while ($maxmovieID >= 1){
+                    if ($imageCounter == 4){
+                        echo "<br>";
+                        $imageCounter = 0;
+                    }
+                    echo "<img class='movieImages' src='images/$maxmovieID.jpg' alt='Movie ID: $maxmovieID' onclick='imageMovieDetails($maxmovieID)' >";
+                    $maxmovieID = $maxmovieID - 1;
+                    $imageCounter = $imageCounter + 1;
+                }
+
+            ?>
+            </div>
         </div>
     </body>
 </html>
