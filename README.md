@@ -13,7 +13,7 @@ Members:
 
 [X] make an account including a login id and password
 
-[-] browse movies playing at the various theatre complexes.
+[X] browse movies playing at the various theatre complexes.
 
 [X] purchase some number of tickets for one or more movies showing at one or more theatres
 
