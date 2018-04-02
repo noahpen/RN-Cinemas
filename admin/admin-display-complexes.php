@@ -73,14 +73,14 @@
                     echo "
                     <tr>
                         <td>$userRow[complexID]</td>
-                        <td>$userRow[complexName]</d>
+                        <td>$userRow[complexName]</td>
                         <td>$userRow[numTheatres]</td>
                         <td>$userRow[streetNum]</td>
                         <td>$userRow[streetName]</td>
                         <td>$userRow[city]</td>
                         <td>$userRow[province]</td>
                         <td>$userRow[postalCode]</td>
-                        <td><input type='radio' name='complexID' value='$userRow[complexID]' />
+                        <td><input type='radio' name='complexID' value='$userRow[complexID]' /></td>
                     </tr>
                     ";
                     }

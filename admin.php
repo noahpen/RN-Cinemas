@@ -40,7 +40,7 @@
 					<button type="button" onclick="location.href='admin/admin-add-complex.php';"name="addcomplexbtn">Add Complex</button>
 					<button type="button" onclick="location.href='admin/admin-display-complexes.php';"name="modcomplexbtn">Modify Complex</button>
 					<button type="button" onclick="location.href='admin/admin-add-theatre.php';"name="addtheatrebtn">Add Theatre</button>
-					<button type="button" onclick="location.href='admin/admin-modify-theatre.php';"name="modtheatrebtn">Modify Theatre</button>
+					<button type="button" onclick="location.href='admin/admin-display-theatres.php';"name="modtheatrebtn">Modify Theatre</button>
             		<button type="button" onclick="location.href='admin/admin-add-showing.php';"name="addshowingbtn">Add Showing</button>
 					<button type="button" onclick="location.href='admin/admin-display-showings.php';"name="displayshowingsbtn">Modify Showing</button>
 					<button type="button" onclick="location.href='admin/admin-customer-search.php';"name="customersearchbtn">Customer Search</button>
