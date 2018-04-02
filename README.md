@@ -35,8 +35,7 @@ Administrators:
 
 [X] remove a member
 
-[-] add or update the information for a theatre complex/theatre
-    - add complex done
+[X] add or update the information for a theatre complex/theatre
 
 [X] add movies to the database
 
