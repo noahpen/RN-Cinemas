@@ -113,7 +113,7 @@
                     <input type = "text" name = "supplierContactName" placeholder="Contact Name"/><br>
                     <input type = "text" name = "supplierNumber" placeholder="Phone Number"/><br>
                     <br>
-                    <input type="submit">
+                    <button type="submit" class="submitButton"><span>Submit Movie</span></button>
                 </form>
             </div>
     </body>

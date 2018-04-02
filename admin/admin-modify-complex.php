@@ -31,18 +31,20 @@
             ?>
             </ul>
             
-            <div style='padding:20px;margin-top:30px;'>           
+            <div class="formOutside">
+            <div class="formInside">          
             <?php
                 if($_SERVER["REQUEST_METHOD"] == "POST") {
                     $myComplexID = mysqli_real_escape_string($db,$_POST['complexID']);
                     $sql = "SELECT * FROM complex WHERE complexID=$myComplexID";
                     $result = mysqli_query($db,$sql);
                     $row = mysqli_fetch_assoc($result);
-                    echo "<h2 class='header' align='center'>Modify Complex $myComplexID</h2>";
+                    echo "<h1 class='header' align='center'>Modify Complex $myComplexID</h1>";
                     if(isset($_POST['modifyComplex'])){
                         echo "<form action='admin-display-complexes.php' method='post'>";
                         echo "<p>Complex ID: &nbsp;
-                              <input type='text' name='sameComplexID' value='$myComplexID' readonly='readonly' /></br>";
+                              <input type='text' name='sameComplexID' value='$myComplexID' readonly='readonly' /></br>
+                              </p>";
                         echo "<p>Complex Name: &nbsp;
                               <input type = 'text' name = 'complexName' placeholder='Complex Name' value='$row[complexName]' size='40'/></br>
                               </p>";
@@ -72,13 +74,13 @@
                               <input type = 'text' name = 'postalCode' placeholder='Postal Code' value='$row[postalCode]'/></br>
                               </p>";
 
-                        echo "<input type='submit' value='Update Complex $myComplexID'>";
+                        echo "<button type='submit' class='submitButton'><span>Update Complex $myComplexID</span></button>";
                         echo "</form>";
                     }
  				}
                     //header("location: admin-modify-showing.php");
             ?>
-            </p>
+            </div>
             </div>
     </body>
 </html>

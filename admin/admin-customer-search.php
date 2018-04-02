@@ -65,7 +65,8 @@
             }    
         ?>
 
-        <div style="padding:20px;margin-top:30px;height:1500px;">
+        <div class="formOutside">
+        <div class="formInside">
             <h1 class="header" align="center">Customer Search</h1>
             <form action = "" method = "post">
                 <h2>Select customer to view past and current tickets bought</h2>
@@ -80,9 +81,9 @@
                     echo "</select>";
                 ?>
                 </p>
-                <input type="submit" value="Search">
+                <button type="submit" class="submitButton"><span>Search</span></button>
             </form>
         </div>
-
+        </div>
     </body>
 </html> 

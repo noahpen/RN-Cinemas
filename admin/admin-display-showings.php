@@ -85,7 +85,7 @@
                     ?>
                 </table>
 				<div align="center" style="margin-top:20px;">
-					<button type='submit' name='modifyShowing'>Modify</button>
+                    <button type="submit" name="modifyShowing" class="submitButton"><span>Modify</span></button>
 				</div>
             </form>
             </div>

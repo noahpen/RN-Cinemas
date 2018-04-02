@@ -53,7 +53,8 @@
 			?>
         </ul>
         </div>
-            <div style="padding:20px;margin-top:30px;height:1500px;">
+            <div class="formOutside">
+            <div class="formInside">
             <h1 class="header" align="center">Add New Theatre</h1>
                 <form action = "" method = "post">
                     <h2>Theatre Info</h2>
@@ -86,7 +87,7 @@
                     </select>
                     </p>
 
-                    <input type="submit">
+                    <button type="submit" class="submitButton"><span>Submit Theatre</span></button>
                 </form>
 
                 <?php
@@ -94,6 +95,7 @@
                         echo "</br>Theatre $theatreNum in complex $complexID created successfully!";
                     }
                 ?>
+            </div>
             </div>
     </body>
 </html>
