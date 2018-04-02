@@ -65,8 +65,8 @@
         <h1 align="center" id="bigHeader">RN CINEMAS</h1>
         <div class="form">
             <form class="login-form" action ="" method="post">
-                <input type="text" name="username" placeholder="username"/>
-                <input type="password" name="password" placeholder="password"/>
+                <input type="text" name="username" placeholder="username" required/>
+                <input type="password" name="password" placeholder="password" required/>
                 <button type="submit">login</button>
                 <p class="message">Not registered? <a href="sign-up.php">Create an account</a></p>
             </form>

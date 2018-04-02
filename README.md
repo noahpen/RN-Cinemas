@@ -13,7 +13,7 @@ Members:
 
 [X] make an account including a login id and password
 
-[-] browse movies playing at the various theatre complexes.
+[X] browse movies playing at the various theatre complexes.
 
 [X] purchase some number of tickets for one or more movies showing at one or more theatres
 
@@ -35,8 +35,7 @@ Administrators:
 
 [X] remove a member
 
-[-] add or update the information for a theatre complex/theatre
-    - add complex done
+[X] add or update the information for a theatre complex/theatre
 
 [X] add movies to the database
 
