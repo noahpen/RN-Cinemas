@@ -34,6 +34,7 @@
         </ul>
         </div>
             <div style="padding:20px;margin-top:30px;height:1500px;">
+				<h1 align="center">Admin Tools</h1>
 				<div class="userOptions">
             		<button type="button" onclick="location.href='admin/admin-list-members.php';" name="listbtn">List Members</button>
             		<button type="button" onclick="location.href='admin/admin-add-movie.php';"name="addmoviebtn">Add Movie</button>

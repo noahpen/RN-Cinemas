@@ -137,13 +137,6 @@ li a:hover:not(.active) {
     border-bottom: none; /* Prevent double borders */
 }
 
-.updateForm {
-    padding: 20px;
-    margin-top: 30px;
-    height: 1500px;
-    margin-left: 10%;
-}
-
 .formOutside {
     padding: 20px; 
     margin-top: 30px; 
