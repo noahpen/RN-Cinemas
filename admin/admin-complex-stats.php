@@ -44,7 +44,7 @@
 				$topComplex = mysqli_fetch_assoc($topComplexResult)['complexName']; 
 				echo "
                     <div>
-                    <table align='center' class='buyTicketsMovieList'>
+                    <table align='center' class='buyTicketsMovieList table'>
                     <tr>
                         <th>Complex</th>
                         <th>Tickets Sold</th>
@@ -53,8 +53,8 @@
                 while ($row = mysqli_fetch_array($complexResult)) {
                     echo "
                     <tr>
-                        <th>$row[complexName]</th>
-                        <th>$row[ticketCount]</th>
+                        <td>$row[complexName]</td>
+                        <td>$row[ticketCount]</td>
                     </tr>
                     ";
                 }

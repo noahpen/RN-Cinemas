@@ -43,7 +43,7 @@
 				$topMovie = mysqli_fetch_assoc($topMovieResult)['movieTitle']; 
 				echo "
                     <div>
-                    <table align='center' class='buyTicketsMovieList'>
+                    <table align='center' class='buyTicketsMovieList table'>
                     <tr>
                         <th>Movie Title</th>
                         <th>Tickets Sold</th>
@@ -52,8 +52,8 @@
                 while ($row = mysqli_fetch_array($movieResult)) {
                     echo "
                     <tr>
-                        <th>$row[movieTitle]</th>
-                        <th>$row[ticketCount]</th>
+                        <td>$row[movieTitle]</td>
+                        <td>$row[ticketCount]</td>
                     </tr>
                     ";
                 }

@@ -40,7 +40,7 @@
                 $ticketResult = mysqli_query($db,$ticketQuery);
                 echo "
                     <div style='margin-top: 100px; margin-bottom: -75px; float:bottom;'>
-                    <table align='center' class='buyTicketsMovieList'>
+                    <table align='center' class='buyTicketsMovieList table'>
                     <tr>
                         <th>Ticket ID</th>
                         <th>Showing ID</th>
@@ -52,11 +52,11 @@
                 while ($row = mysqli_fetch_array($ticketResult)) {
                     echo "
                     <tr>
-                        <th>$row[ticketID]</th>
-                        <th>$row[showingID]</th>
-                        <th>$row[theatreID]</th>
-                        <th>$row[startTime]</th>
-                        <th>$row[movieTitle]</th>
+                        <td>$row[ticketID]</td>
+                        <td>$row[showingID]</td>
+                        <td>$row[theatreID]</td>
+                        <td>$row[startTime]</td>
+                        <td>$row[movieTitle]</td>
                     </tr>
                     ";
                 }
