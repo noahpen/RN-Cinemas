@@ -323,3 +323,33 @@ li a:hover:not(.active) {
     background-color: #4CAF50;
     color: white;
 }
+/* end tabled */
+
+input, select {
+    width: 50%;
+    padding: 8px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[name=password] {
+    width: 100%;
+}
+
+input[name=username] {
+    width: 100%;
+}
+
+input[name=numCancel] {
+    width: 10%;
+}
+
+select[name=complex] {
+    width: 70%;
+}
+
+.addmovie input {
+    width: 20%;
+}

@@ -87,7 +87,7 @@
         </div>
             <div style="padding:20px;margin-top:30px;height:1500px;">
             <h1 class="header" align="center">Add New Movie</h1>
-                <form action="upload.php" method="post" enctype="multipart/form-data">
+                <form action="upload.php" method="post" enctype="multipart/form-data" class="addmovie">
                     <h2>Movie Info</h2>
                     <input type = "text" name = "movieTitle" placeholder="Movie Title" required/><br>
                     <input type = "number" name = "runningTime" placeholder="Running Time (minutes)" required/><br>
